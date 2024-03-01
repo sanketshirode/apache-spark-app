@@ -13,10 +13,10 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
       
-    - name: Copy custom folder
-      run: |
-          sudo mkdir -p /home/user/spark-app
-          cp -r app/* /home/user/spark-app
+    # - name: Copy custom folder
+    #   run: |
+    #       sudo mkdir -p /home/user/spark-app
+    #       cp -r app/* /home/user/spark-app
       
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v1
@@ -32,7 +32,7 @@ jobs:
         file: ./Dockerfile
         platforms: linux/amd64
         push: true
-        tags: abhijitdhamne/spark-pi:latest
+        tags: sanket07/spark-pi:latest
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
