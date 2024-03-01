@@ -12,7 +12,7 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-      
+    # copy custom folder  
     # - name: Copy custom folder
     #   run: |
     #       sudo mkdir -p /home/user/spark-app
