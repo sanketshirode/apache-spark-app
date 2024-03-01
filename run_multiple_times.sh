@@ -1,6 +1,6 @@
 #!/bin/bash
 # Number of times to run the Scala application
-num_runs=5
+num_runs=6
 # Continuous loop to run the Scala application
 while true; do
     for ((i=1; i<=$num_runs; i++)); do
