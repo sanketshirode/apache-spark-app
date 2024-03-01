@@ -5,7 +5,7 @@ num_runs=5
 while true; do
     for ((i=1; i<=$num_runs; i++)); do
         echo "Running HelloWorld for the $i time"
-        scala HelloWorld1234
+        scala HelloWorld123456
     done
     sleep 4000  # Adjust sleep duration as needed
 done
