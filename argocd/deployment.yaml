@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spark-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spark-app
+  template:
+    metadata:
+      labels:
+        app: spark-app
+    spec:
+      containers:
+      - name: spark-app
+        image: abhijitdhamne/spark-pi:latest
+        #command: ["/bin/sh", "-c"]
+        #args: ["echo", "This is Spark Application for production environment"]
+        ports:
+        - containerPort: 4040  # Assuming this is the port your Spark application exposes
